@@ -1,5 +1,4 @@
 body{
-    /* background-color: cadetblue; */
     background-image: url(./background.png);
     background-repeat:no-repeat  round;
     background-size: 100%;
@@ -21,13 +20,117 @@ body{
 }
 .Answers{
     height: 30px;
-    /* width: auto; */
     border: black solid 2px;
     border-radius: 15px;
     margin: 10px;
     padding: 5px;
     display: flex;
-    /* align-items: flex-end; */
-    /* flex-direction: column; */
-    /* justify-content: flex-end; */
+    background-color: white;
+}
+
+
+.check{
+    width: 450px;
+    height: 450px;
+    border: black solid 2px;
+    border-radius: 15px;
+    background-color: wheat;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yes_no{
+    margin-left: 63px;
+    height: 30px;
+    border: black solid 2px;
+    border-radius: 15px;
+    margin: 11px;
+    padding: 5px;
+    display: flex;
+    color: brown;
+    background-color: white;
+}
+h2{
+    font-size: 27px;
+    color: brown;
+    font-family: sans-serif;
+}
+
+.Summary{
+    width: 450px;
+    height: 450px;
+    border: black solid 2px;
+    border-radius: 15px;
+    background-color: violet;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.how{
+    height: 30px;
+    border: black solid 2px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    background-color: white; 
+}
+
+a{
+    text-decoration: none;
+    /* margin-left: 9px; */
+}
+button{
+    width: 100px;
+    background-color: chartreuse;
+    margin-left: 325px;
+    font-size: 15px;
+    font-family: emoji;
+    color: cyan;
+    font-size: 20px;
+    font-family: math;
+}
+p3{
+    margin-left: 240px;
+}
+p1{
+    margin-left: 240px;
+}
+.box2{
+    width: 450px;
+    height: 450px;
+    border: black solid 2px;
+    border-radius: 15px;
+    background-color: violet;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.Answers2{
+height: 30px;
+border: black solid 2px;
+border-radius: 15px;
+margin: 10px;
+padding: 5px;
+display: flex;
+background-color: white;
+}
+p2{
+    margin-left: 240px;
+}
+p4{
+    margin-left: 240px;
 }
