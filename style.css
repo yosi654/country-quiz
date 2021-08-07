@@ -10,13 +10,15 @@ body{
     border: black solid 2px;
     border-radius: 15px;
     background-color: violet;
-    margin: auto;
     text-align: center;
     margin-top: 80px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    margin-left: 429px;
+    margin-top: 32px;
+
 }
 .Answers{
     height: 30px;
@@ -35,13 +37,13 @@ body{
     border: black solid 2px;
     border-radius: 15px;
     background-color: wheat;
-    margin: auto;
     text-align: center;
-    margin-top: 80px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    margin-left: 429px;
+    margin-top: 32px;
 }
 
 .yes_no{
@@ -66,14 +68,11 @@ h2{
     height: 450px;
     border: black solid 2px;
     border-radius: 15px;
-    background-color: violet;
-    margin: auto;
+    background-color: wheat;
+    margin-left: 429px;
+    margin-top: 32px;
     text-align: center;
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
+    display: inline-block;
 }
 .how{
     height: 30px;
@@ -88,11 +87,14 @@ h2{
 a{
     text-decoration: none;
     /* margin-left: 9px; */
+    font-family: cursive;
+    color: blue;
 }
 button{
     width: 100px;
-    background-color: chartreuse;
-    margin-left: 325px;
+    background-color: chocolate;
+    margin-right: 107px;
+    margin-top: 95px;
     font-size: 15px;
     font-family: emoji;
     color: cyan;
@@ -111,22 +113,23 @@ p1{
     border: black solid 2px;
     border-radius: 15px;
     background-color: violet;
-    margin: auto;
     text-align: center;
     margin-top: 80px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    margin-left: 429px;
+    margin-top: 32px;
 }
 .Answers2{
-height: 30px;
-border: black solid 2px;
-border-radius: 15px;
-margin: 10px;
-padding: 5px;
-display: flex;
-background-color: white;
+    height: 30px;
+    border: black solid 2px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    background-color: white;
 }
 p2{
     margin-left: 240px;
@@ -134,9 +137,19 @@ p2{
 p4{
     margin-left: 240px;
 }
-h3{
-
-}
+h3{margin-top: 97px;font-family: cursive;color: brown;font-size: 25px;}
 p5{
-    
+    display: inline-block;
+    margin-top: 40px;
+}
+h1{
+    text-align: center;
+    margin-right: 245px;
+    font-family: cursive;
+    color: aqua;
+    margin-top: 32px;
+}
+.one{
+    margin-left: 130px;
+    margin-top: 28px;
 }
