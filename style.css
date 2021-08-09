@@ -120,7 +120,7 @@ p1{
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    margin-left: 600px;
+    margin-left: 720px;
     margin-top: 32px;
 }
 .Answers2{
@@ -145,7 +145,7 @@ p5{
 }
 h1{
     text-align: center;
-    margin-right: 245px;
+    margin-right: 32px;
     font-family: cursive;
     color: aqua;
     margin-top: 32px;
