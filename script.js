@@ -198,34 +198,38 @@ let button = document.querySelector('.button');
 question.innerHTML = obj1.slides[0].question.que;
 let indexQue = 0;
 
+function ReplaQuestion(){
 for(let i = 0; i < Answers.length ; i++) {
     Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
 };
+}
 
 
 button.addEventListener("click", (e) => {
-   console.log(e)
+    console.log(e)
 });
 let clic = false;
 for (i = 0; i < Answers.length; i++) {
     Answers[i].addEventListener("click", (e) => {
         if(clic == false){
-      console.log(e.target)
-      e.target.style.backgroundColor = 'blue';
-      clic = true;
-    }
+            console.log(e.target)
+            e.target.style.backgroundColor = 'blue';
+            clic = true;
+        }
     });
 }
 button.addEventListener("click", (e) => {
     indexQue++
-    if(indexQue == 4){
-       //question.src = "/Goblet.jpg";
+    if(indexQue == 3){
+        
+        question.style.display = "none";
         for(let i = 0; i < Answers.length ; i++){
             
             Answers[i].style.display = "none";
         } 
         
     }
+    question.innerHTML = obj1.slides[indexQue].question.que;
     for(let i = 0; i < Answers.length ; i++){
     
     Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
