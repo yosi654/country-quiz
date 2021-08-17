@@ -2,7 +2,7 @@ let text = {
     "slides": [
         {
             "question": {
-                "que": "יובל סטופל הוא:",
+                "que": " : יובל סטופל הוא ",
                 "src": null,
                 "answers": [
                     {
@@ -26,44 +26,11 @@ let text = {
                         "correct": true
                     }
                 ]
-            },
-            "openMedia": {
-                "src": "1"
-            },
-            "endMedia": null,
-            "vote": {
-                "question": {
-                    "que": "יובל סטופל הוא:",
-                    "src": null,
-                    "answers": [
-                        {
-                            "id": 0,
-                            "ans": "מלחין ומעבד",
-                            "correct": false
-                        },
-                        {
-                            "id": 1,
-                            "ans": "מנצח",
-                            "correct": false
-                        },
-                        {
-                            "id": 2,
-                            "ans": "מגיש תוכנית בקול חי מיוזיק",
-                            "correct": false
-                        },
-                        {
-                            "id": 3,
-                            "ans": "כל התשובות נכונות",
-                            "correct": true
-                        }
-                    ]
-                },
-                "showAns": true
-            }
+            },  
         },
         {
             "question": {
-                "que": "אברהם פריד שר בדואט עם...",
+                "que": " ...אברהם פריד שר בדואט עם",
                 "src": null,
                 "answers": [
                     {
@@ -88,43 +55,10 @@ let text = {
                     }
                 ]
             },
-            "openMedia": {
-                "src": "1"
-            },
-            "endMedia": null,
-            "vote": {
-                "question": {
-                    "que": "אברהם פריד שר בדואט עם...",
-                    "src": null,
-                    "answers": [
-                        {
-                            "id": 0,
-                            "ans": "נפתלי קמפה",
-                            "correct": false
-                        },
-                        {
-                            "id": 1,
-                            "ans": "ארי היל",
-                            "correct": false
-                        },
-                        {
-                            "id": 2,
-                            "ans": "אלי מרקוס",
-                            "correct": false
-                        },
-                        {
-                            "id": 3,
-                            "ans": "כל התשובות נכונות",
-                            "correct": true
-                        }
-                    ]
-                },
-                "showAns": true
-            }
         },
         {
             "question": {
-                "que": "מי מבצע את השיר?",
+                "que": " ? מי מבצע את השיר ",
                 "src": "אברהם פריד - אוטוטו.mp3",
                 "answers": [
                     {
@@ -149,39 +83,6 @@ let text = {
                     }
                 ]
             },
-            "openMedia": {
-                "src": "1"
-            },
-            "endMedia": null,
-            "vote": {
-                "question": {
-                    "que": "מי מבצע את השיר?",
-                    "src": "אברהם פריד - אוטוטו.mp3",
-                    "answers": [
-                        {
-                            "id": 0,
-                            "ans": "יעקב שוואקי",
-                            "correct": false
-                        },
-                        {
-                            "id": 1,
-                            "ans": "מרדכי בן דוד",
-                            "correct": false
-                        },
-                        {
-                            "id": 2,
-                            "ans": "אברהם פריד",
-                            "correct": true
-                        },
-                        {
-                            "id": 3,
-                            "ans": "בני פרידמן",
-                            "correct": false
-                        }
-                    ]
-                },
-                "showAns": true
-            }
         }
     ]
 }
