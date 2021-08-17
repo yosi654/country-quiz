@@ -89,38 +89,62 @@ let text = {
 
 //const obj = JSON.parse(JSON.stringify(text.question.answers[0].id))
 const obj1 = JSON.parse(JSON.stringify(text))
+let ansCurnet;
 
-
-
+let answersDOM = document.getElementById('answers');
 let question = document.querySelector('.question');
-let Answers = document.querySelectorAll('.Answers');
 let button = document.querySelector('.button');
 
 question.innerHTML = obj1.slides[0].question.que;
 let indexQue = 0;
-
+ReplaQuestion();
 function ReplaQuestion(){
-for(let i = 0; i < Answers.length ; i++) {
-    Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
+let ansArr = obj1.slides[indexQue].question.answers;
+let ans =``;
+
+for(let i = 0; i < ansArr.length ; i++) {
+    ans += `<div class="Answers" onclick="checkAns(${i})">A<p2>${ansArr[i].ans}</p2></a></div>`;
+    // Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
 };
+answersDOM.innerHTML =  ans;
 }
 
 
-button.addEventListener("click", (e) => {
-    console.log(e)
-});
+function checkAns(ans){
+    ansCurnet = ans;
+    let Answers = document.querySelectorAll('.Answers');
+    console.log("ans", ans);
+    Answers.forEach( answer => {
+        answer.style.backgroundColor = "";
+    });
+    Answers[ans].style.backgroundColor = 'blue';
+
+
+}
+
+// button.addEventListener("click", (e) => {
+//     console.log(e)
+// });
+let choice = 0;
 let clic = false;
 for (i = 0; i < Answers.length; i++) {
     Answers[i].addEventListener("click", (e) => {
-        if(clic == false){
+           Answers.forEach( answer => {
+                answer.style.backgroundColor = "";
+            });
+
             console.log(e.target)
             e.target.style.backgroundColor = 'blue';
-            clic = true;
-        }
     });
 }
 button.addEventListener("click", (e) => {
     indexQue++
+    Answers.forEach( answer => {
+        answer.style.backgroundColor = "";
+    })
+
+
+    question.style.backgroundColor = "";
     if(indexQue == 3){
         
         question.style.display = "none";
@@ -131,9 +155,7 @@ button.addEventListener("click", (e) => {
         
     }
     question.innerHTML = obj1.slides[indexQue].question.que;
-    for(let i = 0; i < Answers.length ; i++){
-    
-    Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
-  }
+    ReplaQuestion();
+
   
 });
