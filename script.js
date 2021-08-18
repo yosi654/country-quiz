@@ -94,9 +94,10 @@ let answersDOM = document.getElementById('answers');
 let noChoice = document.getElementById('noChoice');
 let question = document.querySelector('.question');
 let button = document.querySelector('.button');
+let Answers = document.querySelectorAll('.Answers');
 
-question.innerHTML = obj1.slides[0].question.que;
 let indexQue = 0;
+question.innerHTML = obj1.slides[indexQue].question.que;
 ReplaQuestion();
 function ReplaQuestion(){
 let ansArr = obj1.slides[indexQue].question.answers;
@@ -109,15 +110,14 @@ answersDOM.innerHTML =  ans;
 }
 
 
-let Answers = document.querySelectorAll('.Answers');
-function checkAns(ans){
+function checkAns(i){
     Answers = document.querySelectorAll('.Answers');
-    ansCurnet = ans;
-    console.log("ans", ans);
+    ansCurnet = i;
+    console.log("ans", i);
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
     });
-    Answers[ans].style.backgroundColor = 'blue';
+    Answers[i].style.backgroundColor = 'blue';
 
 
 }
@@ -126,10 +126,10 @@ function checkAns(ans){
 let choice = 0;
 
 button.addEventListener("click", (e) => {
-    if(ansCurnet == -1){
-        noChoice.innerText = "לא הוקש";
-        noChoice.style.color = "red";
-    }
+    // if(ansCurnet == -1){
+    //     noChoice.innerHTML = '<h2>yyyy</h2>';
+    //     noChoice.style.color = "red";
+    // }
     if(indexQue< 3 ){
         if(obj1.slides[indexQue].question.answers[ansCurnet].correct == true){
             choice++;
@@ -144,7 +144,7 @@ button.addEventListener("click", (e) => {
     })
 
 
-    question.style.backgroundColor = "";
+    // question.style.backgroundColor = "";
     if(indexQue == 3){
         
         question.style.display = "none";
