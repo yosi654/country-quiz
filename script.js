@@ -117,9 +117,13 @@ function checkAns(i){
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
     });
+<<<<<<< HEAD
     Answers[i].style.backgroundColor = 'blue';
 
 
+=======
+    Answers[ans].style.backgroundColor = 'blue';
+>>>>>>> 28bd7e3f3c644ecb788eefb25e2bad9a639ed93a
 }
 
 
