@@ -4,6 +4,7 @@ body{
     background-size: 100%;
     background-attachment: fixed;
 }
+
 .box{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 450px;
@@ -97,7 +98,7 @@ button{
     width: 100px;
     background-color: chocolate;
     margin-right: 107px;
-    margin-top: 95px;
+    margin-top: 94px;
     font-size: 15px;
     font-family: emoji;
     color: cyan;
