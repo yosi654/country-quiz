@@ -93,6 +93,7 @@ let ansCurnet = -1;
 let answersDOM = document.getElementById('answers');
 let noChoice = document.getElementById('noChoice');
 let question = document.querySelector('.question');
+let box = document.querySelector('.box');
 let button = document.querySelector('.button');
 let Answers = document.querySelectorAll('.Answers');
 
@@ -117,13 +118,9 @@ function checkAns(i){
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
     });
-<<<<<<< HEAD
     Answers[i].style.backgroundColor = 'blue';
 
 
-=======
-    Answers[ans].style.backgroundColor = 'blue';
->>>>>>> 28bd7e3f3c644ecb788eefb25e2bad9a639ed93a
 }
 
 
@@ -153,7 +150,13 @@ button.addEventListener("click", (e) => {
         
         question.style.display = "none";
         answersDOM.style.display = "none";
-        
+        if(choice == obj1.slides.length){
+            box.innerHTML =  `<div class="won">!!!ניצחת</div>
+            <img src="https://media.giphy.com/media/nbJUuYFI6s0w0/giphy.gif" width="500">`;
+
+        }else{
+
+        }
         console.log(choice);
     }
   
