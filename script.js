@@ -118,8 +118,6 @@ function checkAns(ans){
         answer.style.backgroundColor = "";
     });
     Answers[ans].style.backgroundColor = 'blue';
-
-
 }
 
 
