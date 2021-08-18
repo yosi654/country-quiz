@@ -87,11 +87,11 @@ let text = {
     ]
 }
 
-//const obj = JSON.parse(JSON.stringify(text.question.answers[0].id))
 const obj1 = JSON.parse(JSON.stringify(text))
-let ansCurnet;
+let ansCurnet = -1;
 
 let answersDOM = document.getElementById('answers');
+let noChoice = document.getElementById('noChoice');
 let question = document.querySelector('.question');
 let button = document.querySelector('.button');
 
@@ -103,16 +103,16 @@ let ansArr = obj1.slides[indexQue].question.answers;
 let ans =``;
 
 for(let i = 0; i < ansArr.length ; i++) {
-    ans += `<div class="Answers" onclick="checkAns(${i})">A<p2>${ansArr[i].ans}</p2></a></div>`;
-    // Answers[i].innerHTML = obj1.slides[indexQue].question.answers[i].ans;
+    ans += `<div class="Answers" onclick="checkAns(${i})"><p2>${ansArr[i].ans}</p2></div>`;
 };
 answersDOM.innerHTML =  ans;
 }
 
 
+let Answers = document.querySelectorAll('.Answers');
 function checkAns(ans){
+    Answers = document.querySelectorAll('.Answers');
     ansCurnet = ans;
-    let Answers = document.querySelectorAll('.Answers');
     console.log("ans", ans);
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
@@ -122,23 +122,23 @@ function checkAns(ans){
 
 }
 
-// button.addEventListener("click", (e) => {
-//     console.log(e)
-// });
-let choice = 0;
-let clic = false;
-for (i = 0; i < Answers.length; i++) {
-    Answers[i].addEventListener("click", (e) => {
-           Answers.forEach( answer => {
-                answer.style.backgroundColor = "";
-            });
 
-            console.log(e.target)
-            e.target.style.backgroundColor = 'blue';
-    });
-}
+let choice = 0;
+
 button.addEventListener("click", (e) => {
-    indexQue++
+    if(ansCurnet == -1){
+        noChoice.innerText = "לא הוקש";
+        noChoice.style.color = "red";
+    }
+    if(indexQue< 3 ){
+        if(obj1.slides[indexQue].question.answers[ansCurnet].correct == true){
+            choice++;
+        }
+        indexQue++
+        question.innerHTML = obj1.slides[indexQue].question.que;
+        ReplaQuestion();
+        
+    }
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
     })
@@ -148,14 +148,9 @@ button.addEventListener("click", (e) => {
     if(indexQue == 3){
         
         question.style.display = "none";
-        for(let i = 0; i < Answers.length ; i++){
-            
-            Answers[i].style.display = "none";
-        } 
+        answersDOM.style.display = "none";
         
+        console.log(choice);
     }
-    question.innerHTML = obj1.slides[indexQue].question.que;
-    ReplaQuestion();
-
   
 });
