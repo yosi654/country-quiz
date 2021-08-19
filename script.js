@@ -125,39 +125,46 @@ function checkAns(i){
 
 
 let choice = 0;
-
+let a = false;
 button.addEventListener("click", (e) => {
     // if(ansCurnet == -1){
-    //     noChoice.innerHTML = '<h2>yyyy</h2>';
-    //     noChoice.style.color = "red";
-    // }
-    if(indexQue< 3 ){
-        if(obj1.slides[indexQue].question.answers[ansCurnet].correct == true){
-            choice++;
-        }
+    //         noChoice.innerHTML = `<h2>לא הוקש בחירה</h2>`;
+    //         noChoice.style.color = "red";
+    //     }
+        if(indexQue< obj1.slides.length){
+            if(obj1.slides[indexQue].question.answers[ansCurnet].correct == true){
+                choice++;
+            }
+            if(indexQue == obj1.slides.length-1){
+                a = true;
+            }
         indexQue++
+        if(indexQue < 3){
         question.innerHTML = obj1.slides[indexQue].question.que;
         ReplaQuestion();
-        
+        }
     }
     Answers.forEach( answer => {
         answer.style.backgroundColor = "";
     })
-
-
+    
+    
     // question.style.backgroundColor = "";
-    if(indexQue == 3){
+    if(a){
         
         question.style.display = "none";
         answersDOM.style.display = "none";
         if(choice == obj1.slides.length){
             box.innerHTML =  `<div class="won">!!!ניצחת</div>
             <img src="https://media.giphy.com/media/nbJUuYFI6s0w0/giphy.gif" width="500">`;
-
         }else{
-
+            box.innerHTML =  `<div class="Summary">
+            <h3>result !</h3>
+            <div class="res">ענית על ${choice} שאלות מתוך ${obj1.slides.length}</div>
+                <img src="https://media.giphy.com/media/9GIS25pTk3RKHCiq7O/giphy.gif?cid=ecf05e47z79xkap8miwcjm66vi97lymvgfsjk3ylfdmjbhuk&rid=giphy.gif&ct=s"> <div class="one">  <button type="sub"><a href="./end.html"> try again</a></button> </div> 
+        </div>`;
         }
         console.log(choice);
     }
-  
+    
 });
